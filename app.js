@@ -7,6 +7,10 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.use(express.json());
+app.use(cors());
+
+const routes = require('./routes/routes'); 
+app.use(routes);
 
 async function startDatabase() {
     const { DB_USER, DB_PASS, DB_NAME } = process.env
