@@ -11,6 +11,7 @@ app.use(cors());
 
 const routes = require('./routes/routes'); 
 app.use(routes);
+app.use('/files', express.static(path.resolve(__dirname, 'uploads')))
 
 async function startDatabase() {
     const { DB_USER, DB_PASS, DB_NAME } = process.env
