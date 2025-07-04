@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
+import { New } from './pages/New'
  
 export default function Root(){
     return (
@@ -13,6 +14,7 @@ export default function Root(){
             <Routes>
                 <Route path="/" exact element={<Login />} />
                 <Route path="/Dashboard" exact element={<Dashboard />} />
+                <Route path="/new" exact element={<New />} />
             </Routes>
         </Router>
     )
