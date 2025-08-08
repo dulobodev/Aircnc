@@ -25,4 +25,13 @@ const create_spot = async (req, res) => {
     return res.json(spot)
 }
 
-module.exports = { create_spot }
+const buscar_spot = async (req, res) => {
+    const {tech} = req.query
+    console.log(tech)
+
+    const spot = await Spot.find({techs : tech})
+
+    return res.json(spot);
+}
+
+module.exports = { create_spot, buscar_spot }

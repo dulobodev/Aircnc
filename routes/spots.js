@@ -10,4 +10,7 @@ const upload = multer(uploadConfig);
 
 router.post("/", upload.single('thumbnail'), SpotController.create_spot);
 
+router.get("/", SpotController.buscar_spot);
+
+
 module.exports = router;
